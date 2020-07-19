@@ -2,13 +2,12 @@
   "name": "gobarber",
   "version": "1.0.0",
   "description": "An app to virtualy connect barbers and clients ",
-  "repository": "https://github.com/juliofelipe/gobarber",
+  "repository": "https://github.com/oliveirahelena/gobarber",
   "author": "Helena Oliveira",
   "license": "MIT",
   "private": true,
   "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": ["**/react-native", "**/react-native/**"]
+    "packages": ["packages/*"]
   },
   "scripts": {
     "server:dev": "yarn workspace @gobarber/server dev:server",
