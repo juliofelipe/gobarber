@@ -57,6 +57,9 @@
 	<array>
 		<string>Roboto-Medium.ttf</string>
 		<string>Roboto-Regular.ttf</string>
+    <string>RobotoSlab-Medium.ttf</string>
+    <string>RobotoSlab-Regular.ttf</string>
+    <string>Feather.ttf</string>
 	</array>
 </dict>
 </plist>
