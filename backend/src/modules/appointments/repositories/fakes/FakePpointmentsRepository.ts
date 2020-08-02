@@ -1,12 +1,12 @@
 import { uuid } from 'uuidv4';
 import { isEqual } from 'date-fns';
 
-import IAppointmentsRepository from '@modules/appointments/repositories/IAppointementsRepository';
+import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 import ICreateAppointmentDTO from '@modules/appointments/dtos/ICreateAppointmentDTO';
 
 import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';
 
-class AppointmentRepository implements IAppointmentsRepository {
+class FakeAppointmentRepository implements IAppointmentsRepository {
   private appointments: Appointment[] = [];
 
   public async findByDate(date: Date): Promise<Appointment | undefined> {
@@ -31,4 +31,4 @@ class AppointmentRepository implements IAppointmentsRepository {
   }
 }
 
-export default AppointmentRepository;
+export default FakeAppointmentRepository;
