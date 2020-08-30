@@ -55,6 +55,17 @@ const CreateAppointment: React.FC = () => {
     })
   }, []);
 
+  useEffect(() =>{
+    api.get(`providers/${selectedProvider}/day-availability` , {
+      params: {
+        year: selectedDate.getFullYear(),
+        month: selectedDate.getMonth() + 1,
+        day: selectedDate.getDate(),
+      }
+      }).then (response => {
+    })
+  }, [selectedDate]);
+
   const navigateBack = useCallback(() => {
     goBack();
   }, [goBack])
@@ -71,8 +82,10 @@ const CreateAppointment: React.FC = () => {
     if (Platform.OS === 'android') {
       setShowDatePicker(false);
     }
+    if(date) {
+      setSelectedDate(date);
+    }
 
-    setSelectedDate(date);
   }, []);
 
   return (
@@ -115,7 +128,7 @@ const CreateAppointment: React.FC = () => {
             mode="date"
             display="calendar"
             onChange={handleDateChanged}
-            textColor="#f4ede8"
+            // textColor="#f4ede8"
             value={selectedDate}
           />
         )}
