@@ -17,13 +17,23 @@ export const Title  = styled.Text`
 `;
 
 export const Description  = styled.Text`
-
+  font-family: 'RobotoSlab-Medium';
+  font-size: 18px;
+  color: #999591;
+  margin-top: 16px;
 `;
 
 export const OkButton  = styled(RectButton)`
-
+  background: #ff9000;
+  justify-content: center;
+  align-item: center;
+  border-radius: 10px;
+  margin-top: 24px;
+  padding: 12px 24px;
 `;
 
-export const OkButton = styled.Text`
-
+export const OkButtonText = styled.Text`
+  font-family: 'RobotoSlab-Medium';
+  color: #312e38;
+  font-size: 18px;
 `;
